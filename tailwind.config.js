@@ -15,13 +15,20 @@ const tailwindColors = Object.fromEntries(
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  // Scan all component and app files for Tailwind classes
   content: ["./app/**/*.{js,ts,tsx}", "./components/**/*.{js,ts,tsx}", "./lib/**/*.{js,ts,tsx}", "./hooks/**/*.{js,ts,tsx}"],
 
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
       colors: tailwindColors,
+      borderRadius: {
+        'xl': '16px',
+        '2xl': '20px',
+        '3xl': '24px',
+      },
+      spacing: {
+        'safe': 'max(1rem, env(safe-area-inset-left))',
+      },
     },
   },
   plugins: [
