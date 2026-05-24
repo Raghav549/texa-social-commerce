@@ -1,7 +1,7 @@
 import "./scripts/load-env.js";
 import type { ExpoConfig } from "expo/config";
 
-const rawBundleId = "{{bundle_id}}";
+const rawBundleId = "com.texa.socialcommerce";
 const bundleId =
   rawBundleId
     .replace(/[-_]/g, ".")
