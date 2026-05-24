@@ -1,8 +1,8 @@
 {
   "build_command": "pnpm run build",
   "capabilities": [
-    "db",
     "server",
+    "db",
     "user"
   ],
   "dev_command": "pnpm run dev",
@@ -14,10 +14,10 @@
   ],
   "git_remote": {
     "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663520825005/8GFJTfpLdW3cz7pJsiVqfn",
-    "access_key_id": "ASIAZV3A2ECZI4M4CUE4",
-    "secret_access_key": "QbxJa9+LsbFvpiC6mtk/aqDXWUysMqEsw0FriItY",
-    "session_token": "IQoJb3JpZ2luX2VjEH4aCXVzLWVhc3QtMSJIMEYCIQDmEWRpnGvjjUOK4WgbFPXxphBk3C9DiF77vNsxsDTSsAIhAOh0nXRlxoh0FVA4gj2TU1F3RW8QtfSJdoJDeGGWDvuKKvYDCEcQBBoMNjY1Mzg2MDk4ODY2IgwqTN0mw75Usb6Ny3Qq0wNDUgPwoLHUG7GAe2G07gUFID2oiLUBFR6UniVW86jM05ZhijeXjFOgOjmP6Cmx/cC4bLpKDOjE1Pp37xK9p5qUzGtK1WYlgi9WTJOvwX0RDr7WMoL49Ku+Uhhf8TSMa6bj+yScuthjaTZAHCdOso778cfiaZGGzJam5O7VYQFuugOTOsLTVCj9x8QycA1csjQm/8rosD35mi7EqssYo1AZcwRH0ixpIv7fimNOyXHpi5GyjrMQr2r5Jb+VrHZt5CM88OvTLmAlHrA3GZnXSzh7/4vXGSCHxqFwBwv1eizRp50P2igEbKwYMGj5xnASHUkFi41ujZjKfdQIMYpyqFLJORSJTTHjXzyy4icRiCOr3Pk0BqvNLCY9VTzNZTB03Mv05qfWBSmKukMpZBcYw0O6XOag6kIfK7hsUeN77fp+GvaVr3723lFDP8zMelYek9xuj5ILAKu+f5TYNSOzBOZttZAoY7o+5Sxvudpz0UKHz3RfElaFGkS8RiMPrJE3YFqJ7UgUuDG99xcqz+1boPEjIEFswIble4nx/iiLsgpf6mXNVKlpjCo+S5I8o+V4yRb+wIg/yL9AanTyHY02Hc2Oxcr4bkG8a9hYqA5lILktirisYzDFmcrQBjqcAVElA+JydTMPMWayh+Mx1u34bgI23/ILPq/Yrnfk+3bYhlhrvmIT9R3tVEPUHnzpdexxrfNwcmCzouM/yp49e/+3NYIKRfK5kgMx9C465DQP8mVvyLoYc7HswFg8MKl7maaMBRQ98Bb13yQ8pp3C3OxgXxpbnaM76f+KJGtiYk5s4ObL727RLPM28x7N80wO1UfF68DTBXt68DYI9w==",
-    "expiration": "2026-05-24T17:29:41.000Z"
+    "access_key_id": "ASIAZV3A2ECZEK42OGPL",
+    "secret_access_key": "9EX1/Uhc51fezkhpmLSliSvAh4HSQg34jJGH+Z+6",
+    "session_token": "IQoJb3JpZ2luX2VjEDwaCXVzLWVhc3QtMSJHMEUCIQC/AUrK1KWAc6YzxT/wM9ubqWxVFcAM/bdEO4rNdO/ylwIgGxjwaklIxYHwEFUlyFylDCVauYUHhrbaDHSamVNQawgq9gMIBRAEGgw2NjUzODYwOTg4NjYiDJnvDpGyBRbnybOAvyrTA+hrLd9rKCmWX3Zl/dViP6VgrehwT7FQURUrn6unYKbE1OO/XXFJHhhvtPAsI1vE6GyWVRONE+xjo0vNT0F+hrrIKcStAkF0az+81D2OKqdDcfAFKMrDAGoKCRApnmsL7G4RJ7Fn6RlMoZoltJAFJLW0h6H7lzT6AEuSA+1dlPbAUyW/NbceZ54Y/j7mSV2+Mn9ngO95tufuMX/KASlD1MwaeENphKw+NQzm4CwOLMd8J7FW4QX/T/ESbX8X42fRMXDKOngZv3ymS1LmzEi+qojWqj8+ot8XM3lvbtdAqDo4T5ku2TpyW71F6Kub0gomx81fWnEBnXUBfoxchVmoO1oxzxxA4Qz9Zgqu520wZNkvGvXOqsdD+AFrlk0FHDacTt/kcxr4oxDG0ee6i0ovnePn9I8rNCcdBg0QO9tA3cGAAWfTNoLvDOByPmcbGRVLZ1GtL+9vDEARJH5/PbUKeD1+UBKrDJoBXNMcZkqYWlmdV3I7owgWO1aKduxFsAYfFRwHZe/OTJZkhGCuJDD00PUJl3MNU6IHmR1kYjiAN8a1KzfOJtlak8Q+mJ1wrDpphITh2nd3daijnlXaK2WsJg8NdmhbXkytlXuD2Te7wrlnwasmMN3bu9AGOp0BwthPdnggCQv0fqgX+yelYy1OM6NLrOZoCd4/rOZg21ncz/rr8xnlkl9gkxhYSwooFCQjRDeKK6NUfsobeAwTut4oOS49FklgkhC/EabkClb5Fo03nrBZKUBFwP/Yg9tqS5ZZRw0obUWJ0iBOWrm6Ra5m1yqRTD+N53NlJZHbmPsZ8BsRnf4pqB2kmL0kjOB9qfbA+mrP4NAmRVPTxg==",
+    "expiration": "2026-05-21T23:34:53.000Z"
   },
   "name": "texa",
   "path": "/home/ubuntu/texa",

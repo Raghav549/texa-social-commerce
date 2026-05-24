@@ -92,7 +92,7 @@
 ## Phase 3: User Interactions
 
 ### Posts & Comments
-- [x] Create post creation screen
+- [ ] Create post creation screen
 - [ ] Implement media picker (image/video/carousel)
 - [ ] Create media editor (crop, rotate, filters)
 - [ ] Create caption editor with hashtag suggestions
@@ -101,10 +101,10 @@
 - [ ] Implement post scheduling
 - [ ] Create draft save functionality
 - [ ] Implement post API endpoints
-- [x] Create post detail screen
+- [ ] Create post detail screen
 - [ ] Implement like functionality
 - [ ] Implement comment functionality
-- [x] Create comments sheet component
+- [ ] Create comments sheet component
 - [ ] Implement comment deletion
 - [ ] Create likes list screen
 - [ ] Implement save/bookmark functionality
@@ -127,10 +127,10 @@
 ## Phase 4: Messaging & Notifications
 
 ### Direct Messaging
-- [x] Design DM inbox screen
-- [x] Create conversation list component
+- [ ] Design DM inbox screen
+- [ ] Create conversation list component
 - [ ] Implement real-time messaging via Socket.IO
-- [x] Create chat screen UI
+- [ ] Create chat screen UI
 - [ ] Implement message input with attachments
 - [ ] Create message reactions
 - [ ] Implement message editing
@@ -140,7 +140,7 @@
 - [ ] Create voice note recording
 - [ ] Implement typing indicator
 - [ ] Implement read receipts
-- [x] Create new chat screen
+- [ ] Create new chat screen
 - [ ] Implement user search for DM
 - [ ] Create group chat creation
 - [ ] Implement group chat management
@@ -153,9 +153,9 @@
 
 ### Notifications
 - [ ] Implement push notification registration
-- [x] Create notification center screen
+- [ ] Create notification center screen
 - [ ] Implement in-app notifications
-- [x] Create notification categories (likes, comments, follows, messages)
+- [ ] Create notification categories (likes, comments, follows, messages)
 - [ ] Implement notification settings
 - [ ] Implement push notification settings
 - [ ] Create notification preferences per category
