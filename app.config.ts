@@ -16,7 +16,7 @@ const bundleId =
     .join(".") || "space.manus.app";
 
 const timestamp = bundleId.split(".").pop()?.replace(/^t/, "") ?? "";
-const schemeFromBundleId = `manus${timestamp}`;
+const schemeFromBundleId = "texa";
 
 const env = {
   appName: "TEXA",
