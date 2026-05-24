@@ -155,7 +155,7 @@ const config: ExpoConfig = {
     },
   },
 
-  owner: "kashyap67576",
+  owner: "kashyap7078-organization",
 };
 
 export default config;
