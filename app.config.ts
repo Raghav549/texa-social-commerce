@@ -20,7 +20,7 @@ const schemeFromBundleId = "texa";
 
 const env = {
   appName: "TEXA",
-  appSlug: "texa",
+  appSlug: "texa-social-commerce",
   logoUrl: "",
   scheme: schemeFromBundleId,
   iosBundleId: bundleId,
