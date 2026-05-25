@@ -1,4 +1,4 @@
-import { Pressable, Text, type PressableProps, type ViewStyle } from "react-native";
+import { Pressable, Text, type PressableProps } from "react-native";
 import { cn } from "@/lib/utils";
 import { useColors } from "@/hooks/use-colors";
 
@@ -18,52 +18,23 @@ export function Button({
   className,
   textClassName,
   disabled = false,
-  style,
+  onPress,
   ...props
 }: ButtonProps) {
   const colors = useColors();
 
-  const baseStyle: ViewStyle = {
-    borderRadius: 12,
-    justifyContent: "center",
-    alignItems: "center",
-    opacity: disabled ? 0.5 : 1,
+  const variantBgColor: Record<string, string> = {
+    primary: colors.primary,
+    secondary: colors.surface,
+    ghost: "transparent",
+    danger: colors.error,
   };
 
-  const variantStyles: Record<string, ViewStyle> = {
-    primary: {
-      backgroundColor: colors.primary,
-    },
-    secondary: {
-      backgroundColor: colors.surface,
-      borderWidth: 1,
-      borderColor: colors.border,
-    },
-    ghost: {
-      backgroundColor: "transparent",
-    },
-    danger: {
-      backgroundColor: colors.error,
-    },
-  };
-
-  const sizeStyles: Record<string, ViewStyle> = {
-    sm: {
-      paddingHorizontal: 12,
-      paddingVertical: 8,
-      minHeight: 32,
-    },
-    md: {
-      paddingHorizontal: 16,
-      paddingVertical: 12,
-      minHeight: 44,
-    },
-    lg: {
-      paddingHorizontal: 20,
-      paddingVertical: 14,
-      minHeight: 52,
-    },
-  };
+  const sizeConfig = {
+    sm: { px: 12, py: 8, minHeight: 32, fontSize: 13 },
+    md: { px: 16, py: 12, minHeight: 44, fontSize: 15 },
+    lg: { px: 20, py: 14, minHeight: 52, fontSize: 16 },
+  }[size];
 
   const textColorMap: Record<string, string> = {
     primary: colors.background,
@@ -72,32 +43,32 @@ export function Button({
     danger: colors.background,
   };
 
-  const textSizeMap: Record<string, number> = {
-    sm: 13,
-    md: 15,
-    lg: 16,
-  };
-
   return (
     <Pressable
       disabled={disabled}
-      style={({ pressed }) => [
-        baseStyle,
-        variantStyles[variant],
-        sizeStyles[size],
-        pressed && { transform: [{ scale: 0.97 }], opacity: 0.9 },
-        style,
-      ]}
+      onPress={onPress}
+      style={({ pressed }) => ({
+        paddingHorizontal: sizeConfig.px,
+        paddingVertical: sizeConfig.py,
+        minHeight: sizeConfig.minHeight,
+        borderRadius: 12,
+        backgroundColor: variantBgColor[variant],
+        justifyContent: "center",
+        alignItems: "center",
+        opacity: disabled ? 0.5 : pressed ? 0.9 : 1,
+        transform: pressed ? [{ scale: 0.97 }] : [{ scale: 1 }],
+        ...(variant === "secondary" && {
+          borderWidth: 1,
+          borderColor: colors.border,
+        }),
+      })}
       {...props}
     >
       <Text
-        className={cn(
-          "font-semibold",
-          textClassName
-        )}
+        className={cn("font-semibold", textClassName)}
         style={{
           color: textColorMap[variant],
-          fontSize: textSizeMap[size],
+          fontSize: sizeConfig.fontSize,
         }}
       >
         {children}

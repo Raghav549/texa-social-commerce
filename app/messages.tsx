@@ -41,6 +41,11 @@ export default function MessagesScreen() {
   ]);
   const [searchText, setSearchText] = useState("");
 
+  const handleNewMessage = () => {
+    // TODO: Navigate to new message screen or show user selection
+    console.log("Start new message");
+  };
+
   useEffect(() => {
     // Subscribe to conversation updates
     const unsubscribe = messagingService.onConversations((convs) => {
@@ -109,7 +114,7 @@ export default function MessagesScreen() {
       {/* Header */}
       <View className="flex-row items-center justify-between mb-4">
         <Text className="text-2xl font-bold text-foreground">Messages</Text>
-        <Pressable onPress={() => router.push("/messages/new")}>
+        <Pressable onPress={() => router.push("/chat/new")}>
           <Text className="text-lg">✏️</Text>
         </Pressable>
       </View>

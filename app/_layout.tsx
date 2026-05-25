@@ -20,11 +20,10 @@ export default function RootLayout() {
       <Stack
         screenOptions={{
           headerShown: false,
-          animationEnabled: true,
         }}
       >
         {isAuthenticated ? (
-          <Stack.Screen name="(tabs)" options={{ animationEnabled: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         ) : (
           <>
             <Stack.Screen name="auth/login" />
@@ -33,6 +32,8 @@ export default function RootLayout() {
             <Stack.Screen name="welcome" />
           </>
         )}
+        <Stack.Screen name="chat/[id]" />
+        <Stack.Screen name="settings" />
       </Stack>
     </ThemeProvider>
   );

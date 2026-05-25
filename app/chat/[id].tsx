@@ -12,13 +12,13 @@ import { decryptMessage } from "@/lib/crypto";
 export default function ChatScreen() {
   const router = useRouter();
   const colors = useColors();
-  const { id } = useLocalSearchParams();
+  const { id } = useLocalSearchParams<{ id: string }>();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [otherUserTyping, setOtherUserTyping] = useState(false);
   const scrollViewRef = useRef<ScrollView>(null);
-  const typingTimeoutRef = useRef<NodeJS.Timeout>();
+  const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const currentUserId = "user_123"; // TODO: Get from auth store
   const recipientPublicKey = "test_public_key"; // TODO: Get from conversation data

@@ -5,20 +5,35 @@ import { SymbolWeight, SymbolViewProps } from "expo-symbols";
 import { ComponentProps } from "react";
 import { OpaqueColorValue, type StyleProp, type TextStyle } from "react-native";
 
-type IconMapping = Record<SymbolViewProps["name"], ComponentProps<typeof MaterialIcons>["name"]>;
+type IconMapping = Record<string, ComponentProps<typeof MaterialIcons>["name"]>;
 type IconSymbolName = keyof typeof MAPPING;
 
 /**
- * Add your SF Symbols to Material Icons mappings here.
- * - see Material Icons in the [Icons Directory](https://icons.expo.fyi).
- * - see SF Symbols in the [SF Symbols](https://developer.apple.com/sf-symbols/) app.
+ * SF Symbols to Material Icons mappings
+ * - SF Symbols: https://developer.apple.com/sf-symbols/
+ * - Material Icons: https://icons.expo.fyi/
  */
-const MAPPING = {
+const MAPPING: IconMapping = {
   "house.fill": "home",
   "paperplane.fill": "send",
+  "person.fill": "person",
+  "magnifyingglass": "search",
+  "plus.circle.fill": "add-circle",
+  "play.rectangle.fill": "play-arrow",
   "chevron.left.forwardslash.chevron.right": "code",
   "chevron.right": "chevron-right",
-} as IconMapping;
+  "heart.fill": "favorite",
+  "heart": "favorite-border",
+  "bubble.right.fill": "chat-bubble",
+  "bookmark.fill": "bookmark",
+  "bookmark": "bookmark-border",
+  "share": "share",
+  "ellipsis": "more-vert",
+  "gear": "settings",
+  "arrow.left": "arrow-back",
+  "xmark": "close",
+  "checkmark": "check",
+};
 
 /**
  * An icon component that uses native SF Symbols on iOS, and Material Icons on Android and web.
@@ -37,5 +52,12 @@ export function IconSymbol({
   style?: StyleProp<TextStyle>;
   weight?: SymbolWeight;
 }) {
-  return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+  const materialIconName = MAPPING[name as string];
+  
+  if (!materialIconName) {
+    console.warn(`IconSymbol: No mapping found for "${name}". Using "help" as fallback.`);
+    return <MaterialIcons color={color} size={size} name="help" style={style} />;
+  }
+  
+  return <MaterialIcons color={color} size={size} name={materialIconName} style={style} />;
 }

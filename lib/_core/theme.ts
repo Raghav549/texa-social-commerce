@@ -1,10 +1,25 @@
 import { Platform } from "react-native";
 
-import themeConfig from "@/theme.config";
+// Import theme colors from config
+const themeColors = {
+  primary: { light: '#00D9FF', dark: '#00D9FF' },
+  background: { light: '#ffffff', dark: '#0A0E27' },
+  surface: { light: '#f5f5f5', dark: '#1A1F3A' },
+  foreground: { light: '#11181C', dark: '#F0F2F5' },
+  muted: { light: '#687076', dark: '#8B92A0' },
+  border: { light: '#E5E7EB', dark: '#2A3050' },
+  success: { light: '#22C55E', dark: '#4ADE80' },
+  warning: { light: '#F59E0B', dark: '#FBBF24' },
+  error: { light: '#EF4444', dark: '#F87171' },
+  purple: { light: '#9333EA', dark: '#C084FC' },
+  gold: { light: '#D4AF37', dark: '#FFD700' },
+  charcoal: { light: '#36454F', dark: '#1F2937' },
+  glass: { light: 'rgba(255, 255, 255, 0.1)', dark: 'rgba(255, 255, 255, 0.05)' },
+} as const;
 
 export type ColorScheme = "light" | "dark";
 
-export const ThemeColors = themeConfig.themeColors;
+export const ThemeColors = themeColors;
 
 type ThemeColorTokens = typeof ThemeColors;
 type ThemeColorName = keyof ThemeColorTokens;

@@ -1,8 +1,11 @@
 import nacl from "tweetnacl";
+import "react-native-get-random-values";
+import * as base64 from "base64-js";
 
 /**
  * Encryption utility for end-to-end encrypted messaging
  * Uses TweetNaCl.js for public-key cryptography
+ * Compatible with React Native (no Node.js Buffer dependency)
  */
 
 export interface KeyPair {
@@ -24,17 +27,17 @@ export function generateKeyPair(): KeyPair {
 }
 
 /**
- * Convert Uint8Array to base64 string
+ * Convert Uint8Array to base64 string (React Native compatible)
  */
 export function uint8ArrayToBase64(arr: Uint8Array): string {
-  return Buffer.from(arr).toString("base64");
+  return base64.fromByteArray(arr);
 }
 
 /**
- * Convert base64 string to Uint8Array
+ * Convert base64 string to Uint8Array (React Native compatible)
  */
 export function base64ToUint8Array(str: string): Uint8Array {
-  return new Uint8Array(Buffer.from(str, "base64"));
+  return base64.toByteArray(str);
 }
 
 /**
